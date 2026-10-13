@@ -1,0 +1,17 @@
+@base <http://localhost:8000/empresa.ttl> .
+@prefix :        <#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+
+# Descripción del documento
+<> a foaf:Document ;
+    dcterms:title "Documento sobre Kia Motors" ;
+    dcterms:description "Una colección de tripletas RDF que describen a una empresa identificada como 'Kia Motors'" ;
+    foaf:primaryTopic :Kia .
+
+# Descripción de María
+:Kia a foaf:Organization ;
+    foaf:name "Kia Motors" ;
+    foaf:img <img/kiaMotors.jpg> ;
+	foaf:made <producto.ttl#Niro> .

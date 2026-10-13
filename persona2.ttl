@@ -1,0 +1,21 @@
+@base <http://localhost:8000/persona2.ttl> .
+@prefix :        <#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gr:     <http://purl.org/goodrelations/v1#> .
+
+# Descripción del documento
+<> a foaf:Document ;
+    dcterms:title "Documento sobre Juan" ;
+    dcterms:description "Una colección de tripletas RDF que describen a una persona identificada como 'Juan'" ;
+    foaf:primaryTopic :Juan .
+
+# Descripción de María
+:Juan a foaf:Person ;
+    foaf:name "Juan Martinez" ;
+    foaf:img <img/juan.jpg> ;
+    foaf:knows <persona2.ttl#Maria> ;
+    gr:seeks [
+        a gr:Offering ;
+        gr:includes <producto.ttl#Niro>
+    ] .

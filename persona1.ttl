@@ -1,0 +1,18 @@
+@base <http://localhost:8000/persona1.ttl> .
+@prefix :        <#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema:  <http://schema.org/> .
+
+# Descripción del documento
+<> a foaf:Document ;
+    dcterms:title "Documento sobre María" ;
+    dcterms:description "Una colección de tripletas RDF que describen a una persona identificada como 'María'" ;
+    foaf:primaryTopic :Maria .
+
+# Descripción de María
+:Maria a foaf:Person ;
+    foaf:name "María Esparza" ;
+    foaf:img <img/maria.jpg> ;
+    foaf:knows <persona2.ttl#Juan> ;
+    schema:worksFor <empresa.ttl#Kia> .

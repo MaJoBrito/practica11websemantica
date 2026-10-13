@@ -1,0 +1,22 @@
+@base <http://localhost:8000/indice.ttl> .
+@prefix :       <#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+
+#Descripción del documento
+<> a foaf:Document ;
+    dcterms:title "Índice de documentos" ;
+    dcterms:description "Documento índice que enlaza a los documentos RDF sobre María, Juan, Kia y Niro" ;
+    foaf:primaryTopic :coleccion ;
+    foaf:topic <persona1.ttl> ,
+               <persona2.ttl> ,
+               <empresa.ttl> ,
+               <producto.ttl> .
+
+#Colección de documentos
+:coleccion a dcmitype:Collection ;
+    dcterms:hasPart <persona1.ttl> ,
+                    <persona2.ttl> ,
+                    <empresa.ttl> ,
+                    <producto.ttl> .
